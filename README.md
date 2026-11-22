@@ -37,6 +37,48 @@ Para jogar novamente, abra o terminal na mesma pasta e repita apenas o último c
 
 Se o terminal não reconhecer `py -3.11` ou `python3.11`, confira a instalação do Python. No Windows, se `python --version` mostrar Python 3.11, também é possível criar o ambiente com `python -m venv .venv`.
 
+## Estrutura do projeto
+
+Após clonar o repositório ou extrair o ZIP, a pasta do projeto deve ter esta estrutura. Os arquivos de imagem e áudio individuais foram omitidos da árvore.
+
+```text
+Game_Mat_em_Mov/
+├── audio/                         # Trilha e efeitos sonoros
+├── telas/
+│   ├── telaStart/                 # Menu inicial
+│   ├── telaMod/                   # Seleção de modo
+│   ├── telaAno/                   # Seleção de ano escolar
+│   ├── telaPause/                 # Menu de pausa
+│   ├── telaJogo/
+│   │   ├── milho.png              # Figura usada nas questões de contagem
+│   │   ├── one/                   # Arte do modo individual
+│   │   ├── mult/                  # Arte do modo em dupla
+│   │   ├── teclado/
+│   │   │   ├── tecle1/            # Teclado do modo individual
+│   │   │   └── tecle2/
+│   │   │       ├── jogador1/
+│   │   │       └── jogador2/
+│   │   └── vida/
+│   │       ├── vida_1/
+│   │       └── vida2/
+│   └── TelaGameO/
+│       ├── telGO_1/               # Resultados do modo individual
+│       └── TelGO_2/               # Resultados do modo em dupla
+├── main.py                        # Ponto de entrada, telas e eventos
+├── config.py                      # Configurações e caminhos dos recursos
+├── game_logic.py                  # Questões, regras e estado da partida
+├── audio_jogo.py                   # Trilha e efeitos sonoros
+├── informacoes_jogo.py             # Guia de informações dentro do jogo
+├── requirements.txt               # Dependência do jogo
+├── README.md
+├── .gitignore
+├── GDD_Mat_em_Mov_e.pdf
+├── Ficha_ideias_Concluida_e.pdf
+└── Matematica-em-Movimento.pptx.pdf
+```
+
+O ambiente virtual `.venv/` é criado no passo de instalação. O Python pode criar a pasta `__pycache__/` ao executar o jogo.
+
 ## Como jogar
 
 1. Na tela inicial, clique em **Jogar**, escolha o modo individual ou em dupla e selecione o ano escolar.
